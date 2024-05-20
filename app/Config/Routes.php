@@ -1,10 +1,10 @@
 <?php
 
 use CodeIgniter\Router\RouteCollection;
-use App\Controllers\Pages;
+use App\Controllers\Login;
 
 /**
  * @var RouteCollection $routes
  */
 $routes->get('/', 'Home::index'); // Default routing
-$routes->get('pages',[Pages::class, 'index']);
+$routes->get('login',[Login::class, 'index']);
