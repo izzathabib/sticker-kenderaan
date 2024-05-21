@@ -13,6 +13,13 @@
         LOGIN
       </div>
       <div class="card-body">
+        <form action="" method="POST">
+        <?php if(session()->getFlashData('error')) { ?>
+          <div class="alert alert-danger">
+            <?php echo session()->getFlashdata('error'); ?>
+          </div>
+        <?php } ?>
+        
         <div class="mb-3">
           <label for="username" class="form-label">
             Username
@@ -26,10 +33,11 @@
           <input id="inputPassword" name="password" type="password" class="form-control" placeholder="Masukkan password...">
         </div>
         <div class="mb-3">
-          <input type="submit" name="login" class="btn btn-primary" value="LOGIN">
+          <input id="inputPassword" type="submit" name="login" class="btn btn-primary" value="LOGIN">
         </div>
+        </div>
+        </form>
       </div>
-    </div>
   </div>
 </body>
 </html>
